@@ -13,7 +13,7 @@ function App() {
   const [dessertId, setDessert] = useState(1);
   const [orderName, setOrder] = useState('Valued Orc');
   const [extraInstructions, setInstructions] = useState(['Hold the frosting']);
-
+  
   return (
     <div className="App">
       <div className='upper-form'>
@@ -31,9 +31,14 @@ function App() {
         </ul>
       </div>
       <div className='order-form'>
+        <p>Appetizer</p>
         <AppetizerDropdown setAppetizer={setAppetizer} />
+        <p>Entree</p>
         <EntreeDropdown setEntree={setEntree} />
+        <p>Dessert</p>
         <DessertDropdown setDessert={setDessert} />
+      </div>
+      <div>
         <NameInput setOrder={setOrder} />
         <InstructionForm
           extraInstructions={extraInstructions} setInstructions={setInstructions} />

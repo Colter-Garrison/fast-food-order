@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function InstructionForm({ extraInstructions, setInstructions }) {
   const [InstructionForm, setInstructionForm] = useState('');
-
+  
   function handleSubmit(e) {
     e.preventDefault();
     setInstructions([...extraInstructions, InstructionForm]);
