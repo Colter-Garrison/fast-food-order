@@ -16,17 +16,18 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className='upper-form'>
         <h2>Order for {orderName}</h2>
         <FoodImages
           appetizerId={appetizerId}
           entreeId={entreeId}
           dessertId={dessertId} />
       </div>
-      <div>
+      <div className='order-form'>
         <AppetizerDropdown setAppetizer={setAppetizer} />
         <EntreeDropdown setEntree={setEntree} />
         <DessertDropdown setDessert={setDessert} />
+        <NameInput setOrder={setOrder} />
       </div>
     </div>
   );
